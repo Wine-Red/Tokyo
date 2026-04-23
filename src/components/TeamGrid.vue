@@ -6,7 +6,7 @@
         <div class="flex items-center justify-between border-b-2 border-black pb-2">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 flex items-center justify-center shrink-0">
-              <img :src="`/${region.icon}`" :alt="region.name" class="max-w-full max-h-full object-contain" />
+              <img :src="`${import.meta.env.BASE_URL}${region.icon}`" :alt="region.name" class="max-w-full max-h-full object-contain" />
             </div>
             <h3 class="font-orbitron font-black text-xl md:text-2xl text-black uppercase tracking-tighter leading-none">{{ region.name }}</h3>
           </div>
@@ -26,7 +26,7 @@
                  :style="{ backgroundColor: getRegionColor(region.id) }">
               {{ team.seed.split(' ')[1] }}
             </div>
-            <img :src="`/${team.logo}`" :alt="team.name" class="w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-105 shrink-0" />
+            <img :src="`${import.meta.env.BASE_URL}${team.logo}`" :alt="team.name" class="w-10 h-10 md:w-12 md:h-12 object-contain transition-transform duration-300 group-hover:scale-105 shrink-0" />
             <span class="flex-1 min-w-0 font-orbitron font-bold text-[10px] sm:text-xs md:text-sm leading-tight uppercase tracking-tight break-words">{{ team.name }}</span>
           </button>
         </div>
