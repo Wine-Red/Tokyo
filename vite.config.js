@@ -10,5 +10,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: './' // Allows for relative paths in built assets
+  base: process.env.NODE_ENV === 'production' ? '/Tokyo/' : '/'
 })
