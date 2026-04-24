@@ -6,7 +6,7 @@
       
       <!-- Huge Background Logo -->
       <div class="absolute right-0 bottom-0 translate-y-[10%] translate-x-[20%] md:translate-x-[10%] w-[80%] md:w-[70%] lg:w-[50%] h-[80%] md:h-full opacity-[0.15] select-none z-0 pointer-events-none flex items-end md:items-center justify-end mix-blend-luminosity">
-        <img :src="`${import.meta.env.BASE_URL}${team.logo}`" :alt="team.name" class="w-full h-full object-contain grayscale" />
+        <img :src="getImageUrl(team.logo)" :alt="team.name" class="w-full h-full object-contain grayscale" />
       </div>
 
       <!-- Top Bar -->
@@ -102,7 +102,7 @@
           >
             <div class="flex items-center gap-2 md:gap-4 w-full min-w-0">
               <div class="w-6 h-6 md:w-8 md:h-8 flex items-center justify-center shrink-0">
-                <img :src="`${import.meta.env.BASE_URL}${getRoleIcon(player.role)}`" :alt="player.role" class="w-5 h-5 md:w-6 md:h-6 object-contain transition-all duration-300" 
+                <img :src="getImageUrl(getRoleIcon(player.role))" :alt="player.role" class="w-5 h-5 md:w-6 md:h-6 object-contain transition-all duration-300" 
                      :style="activePlayerId === player.id ? 'filter: brightness(0) invert(1); opacity: 1;' : 'filter: brightness(0); opacity: 1;'" />
               </div>
               <div class="flex-1 overflow-hidden">
@@ -148,6 +148,7 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import PlayerRadarChart from './PlayerRadarChart.vue'
+import { getImageUrl } from '../utils/image'
 
 const props = defineProps({
   team: {

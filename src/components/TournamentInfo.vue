@@ -2,7 +2,7 @@
   <div class="relative w-full pt-8 md:pt-16 pb-4 mb-8 overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
-      <img src="/icons/arena1.jpg" alt="Tournament Arena" class="w-full h-full object-cover object-[center_20%] md:object-[center_35%] opacity-60" />
+      <img :src="getImageUrl('icons/arena1.jpg')" alt="Tournament Arena" class="w-full h-full object-cover object-[center_20%] md:object-[center_35%] opacity-60" />
       <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-white/80 to-[#fafafa]"></div>
     </div>
 
@@ -23,6 +23,8 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '../utils/image'
+
 defineProps({
   teamsCount: Number,
   prizePool: String,

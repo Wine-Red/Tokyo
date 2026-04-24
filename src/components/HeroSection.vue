@@ -2,13 +2,13 @@
   <div class="relative w-full h-full flex flex-col justify-end overflow-hidden bg-white border-b-4 border-black group">
     <!-- Background Texture -->
     <div class="absolute inset-0 z-0 overflow-hidden">
-      <img src="/icons/arena2.jpg" alt="Tokyo Arena" class="w-full h-full object-cover object-[68%_center] md:object-center opacity-50 transition-transform duration-[10000ms] ease-out scale-100 group-hover:scale-110" />
+      <img :src="getImageUrl('icons/arena2.jpg')" alt="Tokyo Arena" class="w-full h-full object-cover object-[68%_center] md:object-center opacity-50 transition-transform duration-[10000ms] ease-out scale-100 group-hover:scale-110" />
       <div class="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent"></div>
     </div>
     
     <!-- Top Centered Logo (Sky Area) -->
     <div class="absolute top-4 md:top-12 left-0 right-0 z-20 flex justify-center w-full px-4 pt-4 md:pt-8 pointer-events-none mt-8 md:mt-0 animate-fade-in-down">
-      <img src="/icons/OWCS_Tokyo.png" alt="OWCS Logo" class="h-32 sm:h-40 md:h-48 lg:h-56 w-auto drop-shadow-[0_10px_20px_rgba(255,255,255,0.8)] animate-float" />
+      <img :src="getImageUrl('icons/OWCS_Tokyo.png')" alt="OWCS Logo" class="h-32 sm:h-40 md:h-48 lg:h-56 w-auto drop-shadow-[0_10px_20px_rgba(255,255,255,0.8)] animate-float" />
     </div>
     
     <!-- Content -->
@@ -43,6 +43,8 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '../utils/image'
+
 defineProps({
   tournament: {
     type: Object,

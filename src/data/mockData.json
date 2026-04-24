@@ -9,7 +9,7 @@
   },
   "regions": [
     { "id": "Asia", "name": "亚洲", "icon": "areas/Asia.png" },
-    { "id": "CN", "name": "中国", "icon": "areas/CN.png" },
+    { "id": "CN", "name": "国服", "icon": "areas/CN.png" },
     { "id": "EMEA", "name": "欧洲、中东和非洲", "icon": "areas/EMEA.png" },
     { "id": "NA", "name": "北美", "icon": "areas/NA.png" }
   ],
