@@ -8,7 +8,7 @@
     
     <!-- Top Centered Logo (Sky Area) -->
     <div class="absolute top-4 md:top-12 left-0 right-0 z-20 flex justify-center w-full px-4 pt-4 md:pt-8 pointer-events-none mt-8 md:mt-0 animate-fade-in-down">
-      <img :src="getImageUrl('icons/OWCS_Tokyo.png')" alt="OWCS Logo" class="h-32 sm:h-40 md:h-48 lg:h-56 w-auto drop-shadow-[0_10px_20px_rgba(255,255,255,0.8)] animate-float" />
+      <img :src="getImageUrl('icons/OWCS_Tokyo.png')" alt="OWCS Logo" class="h-32 sm:h-40 md:h-48 lg:h-56 w-auto drop-shadow-[0_10px_20px_rgba(255,255,255,0.8)]" />
     </div>
     
     <!-- Content -->
@@ -51,4 +51,6 @@ defineProps({
     required: true
   }
 })
+
+defineEmits(['go-diy'])
 </script>

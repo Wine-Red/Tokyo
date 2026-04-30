@@ -1,12 +1,12 @@
 <template>
   <div class="w-full">
     <!-- Back Button & Team Header -->
-    <div class="w-full bg-[#0b1325] text-white relative overflow-hidden flex flex-col mb-12 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.5)]"
-         :style="{ backgroundColor: team.themeColor || '#0b1325' }">
+    <div class="w-full text-white relative overflow-hidden flex flex-col mb-12 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.5)]"
+         :style="{ background: `linear-gradient(to right, #111111, ${team.themeColor}cc)` }">
       
       <!-- Huge Background Logo -->
-      <div class="absolute right-0 bottom-0 translate-y-[10%] translate-x-[20%] md:translate-x-[10%] w-[80%] md:w-[70%] lg:w-[50%] h-[80%] md:h-full opacity-[0.15] select-none z-0 pointer-events-none flex items-end md:items-center justify-end mix-blend-luminosity">
-        <img :src="getImageUrl(team.logo)" :alt="team.name" class="w-full h-full object-contain grayscale" />
+      <div class="absolute right-0 bottom-0 translate-y-[10%] translate-x-[20%] md:translate-x-[10%] w-[80%] md:w-[70%] lg:w-[50%] h-[80%] md:h-full opacity-[0.15] select-none z-0 pointer-events-none flex items-end md:items-center justify-end mix-blend-overlay">
+        <img :src="getImageUrl(team.logo)" :alt="team.name" class="w-full h-full object-contain" style="filter: saturate(1.5);" />
       </div>
 
       <!-- Top Bar -->

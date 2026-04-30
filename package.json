@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "echarts": "^5.5.0",
+    "html2canvas": "^1.4.1",
     "vue": "^3.4.21"
   },
   "devDependencies": {

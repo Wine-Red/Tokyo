@@ -14,9 +14,11 @@
           <p class="font-orbitron font-bold text-gray-400 tracking-widest text-sm md:text-base uppercase">The Clash of Titans</p>
         </div>
         
-        <p class="font-inter font-medium text-black text-sm md:text-base max-w-lg lg:max-w-xl text-left md:text-right leading-relaxed border-l-4 border-brand-orange pl-4 md:border-l-0 md:pl-0 md:border-r-4 md:pr-4">
-          来自全球 4 个赛区的 <span class="font-orbitron font-bold text-xl">{{ teamsCount }}</span> 支精英战队齐聚 <span class="font-bold border-b-2 border-black">{{ location }}</span>，争夺 <span class="font-bold text-brand-orange">2026冠军系列赛第一阶段</span> 的<span class="font-bold text-lg md:text-xl ml-1">冠军宝座</span>。
-        </p>
+        <div class="flex flex-col gap-4">
+          <p class="font-inter font-medium text-black text-sm md:text-base max-w-lg lg:max-w-xl text-left md:text-right leading-relaxed border-l-4 border-brand-orange pl-4 md:border-l-0 md:pl-0 md:border-r-4 md:pr-4">
+            来自全球 4 个赛区的 <span class="font-orbitron font-bold text-xl">{{ teamsCount }}</span> 支精英战队齐聚 <span class="font-bold border-b-2 border-black">{{ location }}</span>，争夺 <span class="font-bold text-brand-orange">2026冠军系列赛第一阶段</span> 的<span class="font-bold text-lg md:text-xl ml-1">冠军宝座</span>。
+          </p>
+        </div>
       </div>
     </div>
   </div>
