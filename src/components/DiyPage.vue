@@ -152,10 +152,10 @@
                   <!-- 上半部分：标题与Logo -->
                   <div :style="`flex: 0 0 auto; display:flex; flex-direction:row; align-items:center; justify-content:space-between; padding: ${posterConfig.headerPaddingTop}px 40px 0;`">
                     <div style="text-align:left;">
-                      <div :style="`font-family:'Orbitron', 'SimHei', 'Heiti SC', sans-serif; font-size:${posterConfig.titleSize}rem; font-weight:900; line-height:1.1; color:#000; letter-spacing: 0.05em; text-transform: uppercase;`">
+                      <div :style="`font-family:'Orbitron', 'Noto Sans SC', 'PingFang SC', sans-serif; font-size:${posterConfig.titleSize}rem; font-weight:900; line-height:1.1; color:#000; letter-spacing: 0.05em; text-transform: uppercase;`">
                         Tokyo 2026
                       </div>
-                      <div :style="`font-family:'SimHei', 'Heiti SC', sans-serif; font-size:${posterConfig.subTitleSize}rem; font-weight:900; line-height:1.2; color:#f97316; letter-spacing: 0.2em; margin-top: 4px;`">
+                      <div :style="`font-family:'Noto Sans SC', 'PingFang SC', sans-serif; font-size:${posterConfig.subTitleSize}rem; font-weight:900; line-height:1.2; color:#f97316; letter-spacing: 0.2em; margin-top: 4px;`">
                         梦之队
                       </div>
                     </div>
@@ -180,8 +180,8 @@
 
                         <!-- Player Info Area -->
                         <div style="flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; padding-left: 20px; transform: translateY(-6px);">
-                          <div :style="`font-family:'Orbitron', sans-serif; font-size:${posterConfig.cardHeight * 0.021}rem; font-weight:900; color:#000; text-transform:uppercase; letter-spacing:0.02em; line-height:1.1;`">{{ getPlayer(id).name }}</div>
-                          <div style="font-family:'SimHei', 'Heiti SC', sans-serif; font-size:0.7rem; color:#9ca3af; font-weight:600; letter-spacing:0.02em; margin-top:2px;">
+                          <div :style="`font-family:'Orbitron', 'Noto Sans SC', 'PingFang SC', sans-serif; font-size:${posterConfig.cardHeight * 0.021}rem; font-weight:900; color:#000; text-transform:uppercase; letter-spacing:0.02em; line-height:1.1;`">{{ getPlayer(id).name }}</div>
+                          <div style="font-family:'Noto Sans SC', 'PingFang SC', sans-serif; font-size:0.7rem; color:#9ca3af; font-weight:600; letter-spacing:0.02em; margin-top:2px;">
                             {{ getTeam(getPlayer(id).teamId).name }}
                           </div>
                         </div>
@@ -204,13 +204,13 @@
                   <!-- 右下角二维码 -->
                   <div style="position:absolute; bottom:60px; right:20px; z-index:30; display:flex; flex-direction:row; align-items:center; gap:8px; width: 170px; height: 100px; transform: translateX(5px);">
                     <img src="../assets/icons/godlike.png" style="width:110px; height:110px; object-fit:contain; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
-                    <div style="display:flex; flex-direction:row-reverse; gap:6px; font-family:'SimHei', 'Heiti SC', sans-serif; font-weight:900; color:#000; height: 110px; transform: translateY(-8px);">
+                    <div style="display:flex; flex-direction:row-reverse; gap:6px; font-family:'Noto Sans SC', 'PingFang SC', sans-serif; font-weight:900; color:#000; height: 110px; transform: translateY(-8px);">
                       <!-- 右列 -->
-                      <div style="font-size:1.1rem; line-height:1.1; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; gap: 2px; height: 100px; padding-top: 9px; font-family: Tahoma, Geneva, sans-serif;">
+                      <div style="font-size:1.1rem; line-height:1.1; display:flex; flex-direction:column; justify-content:flex-start; align-items:center; gap: 2px; height: 100px; padding-top: 9px; font-family: 'Noto Sans SC', 'PingFang SC', Tahoma, Geneva, sans-serif;">
                         <span>上</span><span>大</span><span>神</span>
                       </div>
                       <!-- 左列 -->
-                      <div style="font-size:0.8rem; line-height:1.1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; color:#374151; height: 100px; margin: 9px 0 9px 0; font-family: Tahoma, Geneva, sans-serif;">
+                      <div style="font-size:0.8rem; line-height:1.1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; color:#374151; height: 100px; margin: 9px 0 9px 0; font-family: 'Noto Sans SC', 'PingFang SC', Tahoma, Geneva, sans-serif;">
                         <span>组</span><span>建</span><span>你</span><span>的</span><span>梦</span><span>之</span><span>队</span>
                       </div>
                     </div>

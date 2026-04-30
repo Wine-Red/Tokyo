@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'SimHei', 'sans-serif'],
-        orbitron: ['Orbitron', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'SimHei', 'sans-serif'],
+        inter: ['Inter', '"Noto Sans SC"', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
+        orbitron: ['Orbitron', '"Noto Sans SC"', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
       },
       colors: {
         'brand-orange': '#FF9E0F',
