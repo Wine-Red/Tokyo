@@ -119,7 +119,7 @@
               <img :src="predictBg" style="position:absolute; top:0; left:0; width:1672px; height:941px; object-fit:cover; z-index:0;" />
               
               <!-- 冠军之路 Text -->
-              <div style="position:absolute; top:70px; left:60px; font-family:'Orbitron', 'Noto Sans SC', sans-serif; font-size:70px; font-weight:900; z-index:10; display:flex; letter-spacing:4px;">
+              <div style="position:absolute; top:60px; left:60px; font-family:'Orbitron', 'Noto Sans SC', sans-serif; font-size:70px; font-weight:900; z-index:10; display:flex; letter-spacing:4px;">
                 <span style="color:#000;">冠军</span>
                 <span style="color:#f97316;">之路</span>
               </div>
