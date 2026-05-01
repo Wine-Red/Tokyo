@@ -28,10 +28,13 @@
                 />
               </div>
               
-              <!-- DIY Button at the very bottom center -->
-              <div class="absolute bottom-8 left-0 right-0 flex justify-center pointer-events-none">
-                <button @click="goToDiy" class="pointer-events-auto bg-brand-orange text-white px-8 py-3 font-orbitron font-bold text-base hover:bg-black transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none z-50">
+              <!-- Buttons at the very bottom center -->
+              <div class="absolute bottom-16 left-0 right-0 flex justify-center gap-6 px-4 pointer-events-none z-50">
+                <button @click="goToDiy" class="pointer-events-auto bg-brand-orange text-white w-[140px] py-3 text-center font-orbitron font-bold text-sm hover:bg-black transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none">
                   ✦ DIY 梦之队
+                </button>
+                <button @click="goToPrediction" class="pointer-events-auto bg-black text-white w-[140px] py-3 text-center font-orbitron font-bold text-sm hover:bg-brand-orange transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-[4px] active:translate-x-[4px] active:shadow-none">
+                  ✦ 赛程预测
                 </button>
               </div>
             </section>
@@ -49,7 +52,12 @@
 
           <!-- DIY Dream Team View -->
           <div v-else-if="currentView === 'diy'" class="h-full w-full overflow-y-auto bg-[#fafafa]">
-            <DiyPage @back="goHome(false)" />
+            <DiyPage @back="goHome(true)" />
+          </div>
+
+          <!-- Prediction Bracket View -->
+          <div v-else-if="currentView === 'prediction'" class="h-full w-full overflow-y-auto bg-[#fafafa]">
+            <PredictionPage @back="goHome(true)" />
           </div>
         </div>
       </Transition>
@@ -66,6 +74,7 @@ import TournamentInfo from './components/TournamentInfo.vue'
 import TeamGrid from './components/TeamGrid.vue'
 import TeamDetail from './components/TeamDetail.vue'
 import DiyPage from './components/DiyPage.vue'
+import PredictionPage from './components/PredictionPage.vue'
 
 const mockData = ref(mockDataRaw)
 const currentView = ref('home')
@@ -82,6 +91,10 @@ const goToTeam = (teamId) => {
 
 const goToDiy = () => {
   currentView.value = 'diy'
+}
+
+const goToPrediction = () => {
+  currentView.value = 'prediction'
 }
 
 const goHome = (scrollToTeams = false) => {

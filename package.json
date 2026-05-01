@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bracket-vue-tool": "^1.0.24",
     "echarts": "^5.5.0",
     "html2canvas": "^1.4.1",
     "vue": "^3.4.21"
