@@ -107,9 +107,10 @@
             <div style="display: flex; justify-content: center; background: #e5e7eb; border-radius: 8px; padding: 10px; overflow: hidden; margin-bottom: 20px;">
               <img :src="generatedPosterUrl" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
             </div>
-            <div style="display:flex; gap:12px;">
-              <button class="btn-primary" style="flex:1;" @click="closeModal">← 返回修改</button>
-            </div>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+                <a :href="mockData.tournament.links?.predictionEvent || '#'" target="_blank" class="btn-primary" style="display:block; text-align:center; text-decoration:none; box-sizing:border-box;">截图或保存图片后前往参与活动 →</a>
+                <button class="btn-primary" style="background:var(--black);" @click="closeModal">← 返回修改</button>
+              </div>
           </template>
 
           <!-- Hidden Container for html2canvas (Full Poster Export) -->
@@ -197,11 +198,17 @@ import html2canvas from 'html2canvas'
 import { getImageUrl } from '../utils/image'
 import predictBg from '../assets/others/predict.png'
 import godlikeLogo from '../assets/icons/godlike.png'
-import mockData from '../data/mockData.json'
+
+const props = defineProps({
+  mockData: {
+    type: Object,
+    required: true
+  }
+})
 
 defineEmits(['back'])
 
-const TEAMS = mockData.teams
+const TEAMS = props.mockData.teams
 
 // 8 Teams Initial Setup
 const initialTeams = [

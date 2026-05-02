@@ -5,7 +5,11 @@
     "dates": "2026年5月22日 - 5月24日",
     "prizePool": "$1,000,000",
     "teamsCount": 8,
-    "logo": "icons/OWCS_Tokyo.png"
+    "logo": "icons/OWCS_Tokyo.png",
+    "links": {
+      "diyEvent": "https://example.com/diy-event",
+      "predictionEvent": "https://example.com/prediction-event"
+    }
   },
   "regions": [
     { "id": "Asia", "name": "亚洲", "icon": "areas/Asia.png" },

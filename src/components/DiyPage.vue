@@ -134,8 +134,9 @@
               <img :src="generatedPosterUrl" style="max-width: 90%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
             </div>
 
-            <div style="display:flex; gap:12px;">
-              <button class="btn-primary" style="flex:1;" @click="closeModal">← 返回调整阵容</button>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <a :href="mockData.tournament.links?.diyEvent || '#'" target="_blank" class="btn-primary" style="display:block; text-align:center; text-decoration:none; box-sizing:border-box;">截图或保存图片后前往参与活动 →</a>
+              <button class="btn-primary" style="background:var(--black); border-color:var(--black);" @click="closeModal">← 返回调整阵容</button>
             </div>
           </template>
 
@@ -233,19 +234,25 @@
 import { ref, computed, h, nextTick } from 'vue'
 import { getImageUrl } from '../utils/image'
 import html2canvas from 'html2canvas'
-import mockData from '../data/mockData.json'
+
+const props = defineProps({
+  mockData: {
+    type: Object,
+    required: true
+  }
+})
 
 defineEmits(['back'])
 
 // Data
-const TEAMS = mockData.teams.map(t => ({
+const TEAMS = props.mockData.teams.map(t => ({
   id: t.id,
   name: t.name,
   region: t.region,
   logo: 'assets/' + t.logo
 }))
 
-const PLAYERS = mockData.players.map(p => ({
+const PLAYERS = props.mockData.players.map(p => ({
   id: p.id,
   name: p.name,
   teamId: p.teamId,

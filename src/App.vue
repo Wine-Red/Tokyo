@@ -1,6 +1,6 @@
 <template>
   <div class="text-black bg-[#fafafa] h-screen w-full overflow-hidden font-inter relative">
-    <main class="h-full w-full">
+    <main class="h-full w-full" v-if="mockData">
       <Transition name="fade" mode="out-in" @enter="onEnter" @after-enter="onAfterEnter">
         <div :key="currentView" class="h-full w-full">
           <!-- Full Page Scroll Container for Home -->
@@ -52,12 +52,12 @@
 
           <!-- DIY Dream Team View -->
           <div v-else-if="currentView === 'diy'" class="h-full w-full overflow-y-auto bg-[#fafafa]">
-            <DiyPage @back="goHome(true)" />
+            <DiyPage :mock-data="mockData" @back="goHome(true)" />
           </div>
 
           <!-- Prediction Bracket View -->
           <div v-else-if="currentView === 'prediction'" class="h-full w-full overflow-y-auto bg-[#fafafa]">
-            <PredictionPage @back="goHome(true)" />
+            <PredictionPage :mock-data="mockData" @back="goHome(true)" />
           </div>
         </div>
       </Transition>
@@ -66,8 +66,7 @@
 </template>
 
 <script setup>
-import { ref, computed, nextTick } from 'vue'
-import mockDataRaw from './data/mockData.json'
+import { ref, computed, nextTick, onMounted } from 'vue'
 
 import HeroSection from './components/HeroSection.vue'
 import TournamentInfo from './components/TournamentInfo.vue'
@@ -76,13 +75,26 @@ import TeamDetail from './components/TeamDetail.vue'
 import DiyPage from './components/DiyPage.vue'
 import PredictionPage from './components/PredictionPage.vue'
 
-const mockData = ref(mockDataRaw)
+const mockData = ref(null)
 const currentView = ref('home')
 const selectedTeamId = ref(null)
 const scrollContainer = ref(null)
 
 const enableSmoothScroll = ref(true)
 const pendingScrollIndex = ref(null)
+
+onMounted(async () => {
+  try {
+    const res = await fetch(`/data/mockData.json?t=${new Date().getTime()}`)
+    if (res.ok) {
+      mockData.value = await res.json()
+    } else {
+      console.error('Failed to load mockData.json')
+    }
+  } catch (error) {
+    console.error('Error fetching mockData.json:', error)
+  }
+})
 
 const goToTeam = (teamId) => {
   selectedTeamId.value = teamId
