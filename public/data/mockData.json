@@ -20,12 +20,12 @@
   "teams": [
     { "id": "zeta", "name": "Asia #1",       "region": "Asia", "seed": "Asia #1", "logo": "icons/OWCS_Dark.png", "themeColor": "#2A2A2A", "stats": "TBD", "mapStats": "TBD",  "kd": "0.00", "elimPer10": "0.0" },
     { "id": "cr",   "name": "Asia #2",        "region": "Asia", "seed": "Asia #2", "logo": "icons/OWCS_Dark.png",  "themeColor": "#2a0000", "stats": "TBD",  "mapStats": "TBD", "kd": "0.00", "elimPer10": "0.0" },
-    { "id": "wbg",  "name": "Weibo Gaming",          "region": "CN",   "seed": "CN #1",  "logo": "teams/wbg.png", "themeColor": "#3A0E10", "stats": "11W-0L", "mapStats": "34W-5L",  "kd": "4.50", "elimPer10": "19.2" },
-    { "id": "ag",   "name": "All Gamers",           "region": "CN",   "seed": "CN #2",  "logo": "teams/ag.png",  "themeColor": "#1a0000", "stats": "9W-4L",  "mapStats": "31W-20L", "kd": "2.98", "elimPer10": "15.6" },
-    { "id": "tm",   "name": "Twisted Minds",         "region": "EMEA", "seed": "EMEA #1","logo": "teams/tm.png",  "themeColor": "#3A0E10", "stats": "8W-0L",  "mapStats": "25W-1L",  "kd": "3.68", "elimPer10": "20.1" },
-    { "id": "vp",   "name": "Virtus.pro",            "region": "EMEA", "seed": "EMEA #2","logo": "teams/vp.png",  "themeColor": "#2a1500", "stats": "6W-3L",  "mapStats": "21W-13L", "kd": "2.54", "elimPer10": "14.4" },
-    { "id": "dal",  "name": "Dallas Fuel",           "region": "NA",   "seed": "NA #1",  "logo": "teams/dal.png", "themeColor": "#001530", "stats": "8W-0L",  "mapStats": "25W-7L",  "kd": "3.07", "elimPer10": "17.4" },
-    { "id": "ssg",  "name": "Spacestation Gaming",   "region": "NA",   "seed": "NA #2",  "logo": "teams/ssg.png", "themeColor": "#241a00", "stats": "6W-3L",  "mapStats": "22W-15L", "kd": "2.92", "elimPer10": "17.0" }
+    { "id": "wbg",  "name": "Weibo Gaming",          "region": "CN",   "seed": "CN #1",  "logo": "/teams/wbg.png", "themeColor": "#3A0E10", "stats": "11W-0L", "mapStats": "34W-5L",  "kd": "4.50", "elimPer10": "19.2" },
+    { "id": "ag",   "name": "All Gamers",           "region": "CN",   "seed": "CN #2",  "logo": "/teams/ag.png",  "themeColor": "#1a0000", "stats": "9W-4L",  "mapStats": "31W-20L", "kd": "2.98", "elimPer10": "15.6" },
+    { "id": "tm",   "name": "Twisted Minds",         "region": "EMEA", "seed": "EMEA #1","logo": "/teams/tm.png",  "themeColor": "#3A0E10", "stats": "8W-0L",  "mapStats": "25W-1L",  "kd": "3.68", "elimPer10": "20.1" },
+    { "id": "vp",   "name": "Virtus.pro",            "region": "EMEA", "seed": "EMEA #2","logo": "/teams/vp.png",  "themeColor": "#2a1500", "stats": "6W-3L",  "mapStats": "21W-13L", "kd": "2.54", "elimPer10": "14.4" },
+    { "id": "dal",  "name": "Dallas Fuel",           "region": "NA",   "seed": "NA #1",  "logo": "/teams/dal.png", "themeColor": "#001530", "stats": "8W-0L",  "mapStats": "25W-7L",  "kd": "3.07", "elimPer10": "17.4" },
+    { "id": "ssg",  "name": "Spacestation Gaming",   "region": "NA",   "seed": "NA #2",  "logo": "/teams/ssg.png", "themeColor": "#241a00", "stats": "6W-3L",  "mapStats": "22W-15L", "kd": "2.92", "elimPer10": "17.0" }
   ],
   "players": [
     { "id": "p1",  "name": "TBD",     "teamId": "cr",   "role": "Tank",    "stats": [0, 0, 0,  0,  0]  },

@@ -212,10 +212,10 @@ const TEAMS = props.mockData.teams
 
 // 8 Teams Initial Setup
 const initialTeams = [
-  TEAMS[0].id, TEAMS[7].id, // M1: 1 vs 8
-  TEAMS[3].id, TEAMS[4].id, // M2: 4 vs 5
-  TEAMS[1].id, TEAMS[6].id, // M3: 2 vs 7
-  TEAMS[2].id, TEAMS[5].id  // M4: 3 vs 6
+  TEAMS[4].id, TEAMS[3].id, // M1 (Top): TM vs AG
+  TEAMS[6].id, TEAMS[1].id, // M2 (2nd): DAL vs Asia #2
+  TEAMS[2].id, TEAMS[5].id, // M3 (3rd): WBG vs VP
+  TEAMS[0].id, TEAMS[7].id  // M4 (4th): Asia #1 vs SSG
 ]
 
 // Matches Definition with Coordinates
@@ -225,8 +225,8 @@ const baseMatches = {
   m3: { id: 'm3', title: '胜者组 R1', t1: initialTeams[4], t2: initialTeams[5], winner: null, next: { id: 'm8', pos: 't1' }, nextLoser: { id: 'm5', pos: 't1' }, x: 20, y: 240 },
   m4: { id: 'm4', title: '胜者组 R1', t1: initialTeams[6], t2: initialTeams[7], winner: null, next: { id: 'm8', pos: 't2' }, nextLoser: { id: 'm5', pos: 't2' }, x: 20, y: 330 },
 
-  m7: { id: 'm7', title: '胜者组 半决赛', t1: null, t2: null, winner: null, next: { id: 'm12', pos: 't1' }, nextLoser: { id: 'm10', pos: 't1' }, x: 240, y: 85 },
-  m8: { id: 'm8', title: '胜者组 半决赛', t1: null, t2: null, winner: null, next: { id: 'm12', pos: 't2' }, nextLoser: { id: 'm9', pos: 't1' }, x: 240, y: 285 },
+  m7: { id: 'm7', title: '胜者组 半决赛', t1: null, t2: null, winner: null, next: { id: 'm12', pos: 't1' }, nextLoser: { id: 'm9', pos: 't1' }, x: 240, y: 85 },
+  m8: { id: 'm8', title: '胜者组 半决赛', t1: null, t2: null, winner: null, next: { id: 'm12', pos: 't2' }, nextLoser: { id: 'm10', pos: 't1' }, x: 240, y: 285 },
 
   m12: { id: 'm12', title: '胜者组 决赛', t1: null, t2: null, winner: null, next: { id: 'm14', pos: 't1' }, nextLoser: { id: 'm13', pos: 't1' }, x: 460, y: 185 },
 
