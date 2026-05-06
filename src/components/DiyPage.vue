@@ -135,7 +135,7 @@
             </div>
 
             <div style="display:flex; flex-direction:column; gap:12px;">
-              <a :href="mockData.tournament.links?.diyEvent || '#'" target="_blank" class="btn-primary" style="display:block; text-align:center; text-decoration:none; box-sizing:border-box;">截图或保存图片后前往参与活动 →</a>
+              <a :href="mockData.tournament.links?.diyEvent || '#'" class="btn-primary" style="display:block; text-align:center; text-decoration:none; box-sizing:border-box;">截图或保存图片后前往参与活动 →</a>
               <button class="btn-primary" style="background:var(--black); border-color:var(--black);" @click="closeModal">← 返回调整阵容</button>
             </div>
           </template>

@@ -108,7 +108,7 @@
               <img :src="generatedPosterUrl" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
             </div>
             <div style="display:flex; flex-direction:column; gap:12px;">
-                <a :href="mockData.tournament.links?.predictionEvent || '#'" target="_blank" class="btn-primary" style="display:block; text-align:center; text-decoration:none; box-sizing:border-box;">截图或保存图片后前往参与活动 →</a>
+                <a :href="mockData.tournament.links?.predictionEvent || '#'" class="btn-primary" style="display:block; text-align:center; text-decoration:none; box-sizing:border-box;">截图或保存图片后前往参与活动 →</a>
                 <button class="btn-primary" style="background:var(--black);" @click="closeModal">← 返回修改</button>
               </div>
           </template>
