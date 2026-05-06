@@ -85,14 +85,15 @@ const pendingScrollIndex = ref(null)
 
 onMounted(async () => {
   try {
-    const res = await fetch(`/data/mockData.json?t=${new Date().getTime()}`)
+    const basePath = import.meta.env.BASE_URL || '/'
+    const res = await fetch(`${basePath}data/mockData.json?t=${new Date().getTime()}`)
     if (res.ok) {
       mockData.value = await res.json()
     } else {
-      console.error('Failed to load mockData.json')
+      throw new Error(`HTTP error! status: ${res.status}`)
     }
-  } catch (error) {
-    console.error('Error fetching mockData.json:', error)
+  } catch (e) {
+    console.error('Failed to load mockData.json', e)
   }
 })
 

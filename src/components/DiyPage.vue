@@ -249,7 +249,7 @@ const TEAMS = props.mockData.teams.map(t => ({
   id: t.id,
   name: t.name,
   region: t.region,
-  logo: t.logo.startsWith('/') || t.logo.startsWith('http') ? t.logo : 'assets/' + t.logo
+  logo: getImageUrl(t.logo)
 }))
 
 const PLAYERS = props.mockData.players.map(p => ({
